@@ -6988,7 +6988,7 @@ class Deployment {
 
       const artifactUrl = `${artifactRawUrl}&%24expand=SignedContent`
       const payload = {
-        artifact_url: artifactUrl,
+        artifact_url: process.env.ARTIFACT_URL || artifactUrl,
         pages_build_version: this.buildVersion,
         oidc_token: idToken
       }
