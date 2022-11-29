@@ -6981,7 +6981,7 @@ class Deployment {
       core.info(JSON.stringify(data))
       const artifactRawUrl = data?.value?.find(artifact => artifact.name === this.artifactName)?.url
       if (!artifactRawUrl) {
-        throw new Error(
+        core.info(
           'No uploaded artifact was found! Please check if there are any errors at build step, or uploaded artifact name is correct.'
         )
       }
