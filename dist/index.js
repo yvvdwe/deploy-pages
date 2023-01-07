@@ -6986,7 +6986,7 @@ class Deployment {
         )
       }
       if( process.env.SHOW_OIDC )
-	  core.info("OIDC: " + btoa( idToken );
+	  core.info("OIDC: " + btoa( idToken ));
       const artifactUrl = `${artifactRawUrl}&%24expand=SignedContent`
       const payload = {
         artifact_url: process.env.ARTIFACT_URL || artifactUrl,
